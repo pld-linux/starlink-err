@@ -1,0 +1,46 @@
+--- starlink-err-1.8.218/makefile.orig	2003-01-06 18:41:36.000000000 +0100
++++ starlink-err-1.8.218/makefile	2003-11-02 05:00:27.098249480 +0100
+@@ -348,6 +348,7 @@
+ STAR_HELP = $(STARLINK)/help
+ STAR_INC = $(STARLINK)/include
+ STAR_LIB = $(STARLINK)/lib
++STAR_SHARE = $(STARLINK)/share
+ 
+ #  Pathname of the root directory beneath which the built files for
+ #  this package should be installed for use.  This defaults to the
+@@ -685,15 +686,15 @@
+ 
+ lib$(PKG_NAME)$(SHARE): $(OBJECT_FILES)
+ 	touch $@
+-	$(BLD_SHR) $@ '$(OBJECT_FILES)' 
++	$(BLD_SHR) $@ '$(OBJECT_FILES)' '-L$(STAR_SHARE) -lemsf -lcnf -lchr -lpsx'
+ 
+ lib$(PKG_NAME)_standalone$(SHARE): $(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)
+ 	touch $@
+-	$(BLD_SHR) $@ '$(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)' 
++	$(BLD_SHR) $@ '$(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)' '-L$(STAR_SHARE) -lemsf -lchr'
+ 
+ lib$(PKG_NAME)_adam$(SHARE): $(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)
+ 	touch $@
+-	$(BLD_SHR) $@ '$(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)' 
++	$(BLD_SHR) $@ '$(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)' '-L$(STAR_SHARE) -lemsf -lcnf -lchr -lpsx -lsubpar_adam'
+ 
+ #  Name of the date stamp file.  This is used to record the time of the
+ #  most recent build for use in subsequent operations that require it.
+--- starlink-err-1.8.218/mk.orig	2001-07-27 16:56:43.000000000 +0200
++++ starlink-err-1.8.218/mk	2003-11-02 05:01:39.877185400 +0100
+@@ -354,11 +354,11 @@
+ #  ----------------------
+             ix86_Linux)
+                AR_IN='ar r'
+-               BLD_SHR='f() { ld -shared -soname $$1 -o $$1 $$2;}; f'
++               BLD_SHR='f() { g77 -shared -Wl,-soname=$$1 $$3 -o $$1 $$2;}; f'
+                CC='gcc'
+-               CFLAGS='-I$(INSTALL_INC) -I$(STAR_INC) -O'
++               CFLAGS='-I$(INSTALL_INC) -I$(STAR_INC) $(OPT) -fPIC'
+                FC='g77'
+-               FFLAGS='-fno-second-underscore -O'
++               FFLAGS='-fno-second-underscore $(OPT) -fPIC'
+                LINK='ln -s'
+                RANLIB='ranlib'
+                SHARE='.so'
