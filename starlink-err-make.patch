@@ -18,12 +18,12 @@
  lib$(PKG_NAME)_standalone$(SHARE): $(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)
  	touch $@
 -	$(BLD_SHR) $@ '$(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)' 
-+	$(BLD_SHR) $@ '$(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)' '-L$(STAR_SHARE) -lemsf -lchr'
++	$(BLD_SHR) $@ '$(OBJECT_FILES_STAND) $(OBJECT_FILES_UT)' '-L$(STAR_SHARE) -lemsf -lchr -L. -lerr'
  
  lib$(PKG_NAME)_adam$(SHARE): $(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)
  	touch $@
 -	$(BLD_SHR) $@ '$(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)' 
-+	$(BLD_SHR) $@ '$(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)' '-L$(STAR_SHARE) -lemsf -lcnf -lchr -lpsx -lsubpar_adam'
++	$(BLD_SHR) $@ '$(OBJECT_FILES_ADAM) $(OBJECT_FILES_UT)' '-L$(STAR_SHARE) -lemsf -lcnf -lchr -lpsx -lsubpar_adam -L. -lerr'
  
  #  Name of the date stamp file.  This is used to record the time of the
  #  most recent build for use in subsequent operations that require it.

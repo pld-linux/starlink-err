@@ -63,8 +63,6 @@ Statyczne biblioteki Starlink MERS.
 %patch -p1
 
 %build
-#LD_LIBRARY_PATH=. \
-#PATH="$PATH:%{stardir}/bin"
 OPT="%{rpmcflags}" \
 SYSTEM=ix86_Linux \
 ./mk build \
