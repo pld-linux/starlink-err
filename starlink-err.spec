@@ -5,7 +5,8 @@ Version:	1.8.218
 Release:	1
 License:	non-commercial use and distribution (see MERS_CONDITIONS)
 Group:		Libraries
-Source0:	ftp://ftp.starlink.rl.ac.uk/pub/ussc/store/mers/err.tar.Z
+#Source0:	ftp://ftp.starlink.rl.ac.uk/pub/ussc/store/mers/err.tar.Z
+Source0:	err.tar.Z
 # Source0-md5:	1916d131656da30052c6ca5df3556c84
 Patch0:		%{name}-make.patch
 URL:		http://www.starlink.rl.ac.uk/static_www/soft_further_MERS.html
