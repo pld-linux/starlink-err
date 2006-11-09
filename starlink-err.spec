@@ -29,15 +29,14 @@ Ten pakiet zawiera dwie biblioteki funkcji fortranowych - MSG i ERR,
 które mog± byæ u¿ywane do dostarczania tekstu informacyjnego do
 u¿ytkownika z poziomu dowolnej aplikacji. MSG (Message Reporting
 System - system raportowania komunikatów) s³u¿y do raportowania
-informacji nie bêd±cych b³êdami, natomiast ERR (Error Reporting
-System - system raportowania b³êdów) jest u¿ywany dla komunikatów
-b³êdów.
+informacji nie bêd±cych b³êdami, natomiast ERR (Error Reporting System
+- system raportowania b³êdów) jest u¿ywany dla komunikatów b³êdów.
 
 %package devel
 Summary:	Header files for MERS libraries
 Summary(pl):	Pliki nag³ówkowe bibliotek MERS
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	starlink-pcs-devel
 
 %description devel
@@ -50,7 +49,7 @@ Pliki nag³ówkowe bibliotek MERS.
 Summary:	Static Starlink MERS libraries
 Summary(pl):	Statyczne biblioteki Starlink MERS
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Starlink MERS libraries.
