@@ -1,5 +1,5 @@
 Summary:	MERS - Message and Error Reporting System
-Summary(pl):	MERS - system komunikatów i raportowania b³êdów
+Summary(pl.UTF-8):   MERS - system komunikatÃ³w i raportowania bÅ‚Ä™dÃ³w
 Name:		starlink-err
 Version:	1.8.218
 Release:	1
@@ -24,17 +24,17 @@ application program. The Message Reporting System, MSG, is used for
 reporting non-error information and the Error Reporting System, ERR,
 is used specifically for reporting error messages.
 
-%description -l pl
+%description -l pl.UTF-8
 Ten pakiet zawiera dwie biblioteki funkcji fortranowych - MSG i ERR,
-które mog± byæ u¿ywane do dostarczania tekstu informacyjnego do
-u¿ytkownika z poziomu dowolnej aplikacji. MSG (Message Reporting
-System - system raportowania komunikatów) s³u¿y do raportowania
-informacji nie bêd±cych b³êdami, natomiast ERR (Error Reporting System
-- system raportowania b³êdów) jest u¿ywany dla komunikatów b³êdów.
+ktÃ³re mogÄ… byÄ‡ uÅ¼ywane do dostarczania tekstu informacyjnego do
+uÅ¼ytkownika z poziomu dowolnej aplikacji. MSG (Message Reporting
+System - system raportowania komunikatÃ³w) sÅ‚uÅ¼y do raportowania
+informacji nie bÄ™dÄ…cych bÅ‚Ä™dami, natomiast ERR (Error Reporting System
+- system raportowania bÅ‚Ä™dÃ³w) jest uÅ¼ywany dla komunikatÃ³w bÅ‚Ä™dÃ³w.
 
 %package devel
 Summary:	Header files for MERS libraries
-Summary(pl):	Pliki nag³ówkowe bibliotek MERS
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe bibliotek MERS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	starlink-pcs-devel
@@ -42,19 +42,19 @@ Requires:	starlink-pcs-devel
 %description devel
 Header files for MERS libraries.
 
-%description devel -l pl
-Pliki nag³ówkowe bibliotek MERS.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe bibliotek MERS.
 
 %package static
 Summary:	Static Starlink MERS libraries
-Summary(pl):	Statyczne biblioteki Starlink MERS
+Summary(pl.UTF-8):   Statyczne biblioteki Starlink MERS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Starlink MERS libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki Starlink MERS.
 
 %prep
