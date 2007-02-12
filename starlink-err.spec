@@ -1,5 +1,5 @@
 Summary:	MERS - Message and Error Reporting System
-Summary(pl.UTF-8):   MERS - system komunikatów i raportowania błędów
+Summary(pl.UTF-8):	MERS - system komunikatów i raportowania błędów
 Name:		starlink-err
 Version:	1.8.218
 Release:	1
@@ -34,7 +34,7 @@ informacji nie będących błędami, natomiast ERR (Error Reporting System
 
 %package devel
 Summary:	Header files for MERS libraries
-Summary(pl.UTF-8):   Pliki nagłówkowe bibliotek MERS
+Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek MERS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	starlink-pcs-devel
@@ -47,7 +47,7 @@ Pliki nagłówkowe bibliotek MERS.
 
 %package static
 Summary:	Static Starlink MERS libraries
-Summary(pl.UTF-8):   Statyczne biblioteki Starlink MERS
+Summary(pl.UTF-8):	Statyczne biblioteki Starlink MERS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
